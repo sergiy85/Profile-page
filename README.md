@@ -1,22 +1,6 @@
-<div align="center">
-  <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
-  <h1>Webpack Template</h1>
-  <p>
-    Webpack is a module bundler. Its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging just about any resource or asset.
-  </p>
-  <p>Author: <a href="https://tocode.ru" target="_blank">To code</a> | <a href="https://www.youtube.com/playlist?list=PLkCrmfIT6LBQWN02hNj6r1daz7965GxsV" target="_blank">Youtube guide in Russian</a></p>
-</div>
-
-
 ## Build Setup:
 
 ``` bash
-# Download repository:
-git clone https://github.com/vedees/webpack-template webpack-template
-
-# Go to the app:
-cd webpack-template
-
 # Install dependencies:
 npm install
 
@@ -35,8 +19,6 @@ npm run build
 * `src/assets/img` - put images here. Don't forget to use correct path: `assets/img/some.jpg`
 * `src/js` - put custom app scripts here
 * `src/index.js` - main app file where you include/import all required libs and init app
-* `src/components` - folder with custom `.vue` components
-* `src/store` - app store for vue
 * `static/` - folder with extra static assets that will be copied into output folder
 
 <div align="center">
@@ -296,5 +278,3 @@ Example 2: `@include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 4
 
 ## License
 [MIT](./LICENSE)
-
-Copyright (c) 2018-present, [Evgenii Vedegis](https://github.com/vedees)
