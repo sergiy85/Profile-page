@@ -1,0 +1,50 @@
+.footer{
+	width: 100%;
+	background: #FFFFFF;
+}
+.inner-footer{
+	padding: 34px 30px;
+  @include flexBetween ();
+  @include small{
+  	flex-wrap: wrap;
+  	justify-content: center;
+    padding: 4px 7px;
+  }
+}
+.foot--wrap{
+	display: flex;
+	align-items: center;
+  flex-wrap: wrap;
+}
+.foot-logo{
+	margin-right: 50px;
+	@include small{
+    margin: 0 auto; 
+	}
+}
+.nav-foot__list{
+	column-count: 4;
+	@include small{
+    @include flexCenter ();
+    flex-wrap: wrap;
+  }
+}
+.nav-foot__link{
+	font-family: $mainFont;
+	font-size: 12px;
+	color: #29333F;
+	padding-right: 20px; 
+}
+.flags{
+	@include small{
+		display: flex;
+    width: 100%;
+    justify-content: space-around;
+	}
+}
+.btn-flags{
+	@include btnService();
+	&:first-child{
+		margin-right: 10px;
+	}
+}

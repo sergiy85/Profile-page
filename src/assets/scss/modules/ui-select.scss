@@ -1,0 +1,46 @@
+// select
+.select-wrap{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 53px;
+	padding-bottom: 15px;
+}
+.select,
+.label {
+  color: $color-grey;
+  font-family: $mainFont ;
+  display: block;
+}
+
+#select-box {
+  position: absolute;
+  top: 0;
+  right: -14px;
+  padding: 5px 0;
+  height: 40px;
+  opacity: 0;
+  background: transparent;
+  border: 0 none;
+}
+.select-box {
+ background: transparent;
+}
+
+.label {
+  position: relative;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.open .label::after {
+  content: "▲";
+}
+.label::after {
+  content: "▼";
+  font-size: 10px;
+  position: absolute;
+  right: -12px;
+  top: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+

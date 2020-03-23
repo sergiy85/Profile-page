@@ -1,0 +1,116 @@
+.user-info{
+	width: 1070px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: nowrap;
+  padding-bottom: 0;
+	 
+	@media screen and (max-width: $smDesktopWidth) {
+    max-width: $tableWidth - 100px;
+  }
+  @media screen and (max-width: $tableWidth) {
+    max-width: $phoneWidth - 100px;
+    flex-direction: column;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    max-width: $smPhoneWidth;
+  } 
+}
+
+.user-photo{
+	@include border-radius(50%);
+}
+.user-photo-container{
+	margin-right: 30px;
+	width: 170px;
+	@media screen and (max-width: $tableWidth) {
+    margin: 0 auto;
+  }
+}
+.left{
+	position: relative;
+	@media screen and (max-width: $tableWidth) {
+    width: 100%;
+  }
+}
+.right{
+  @media screen and (max-width: $tableWidth) {
+    width: 100%;
+  }
+}
+.btn-upload{
+	position: absolute;
+	bottom: 12px;
+  left: 20px;
+	width: 131px;
+  height: 31px;
+  padding: 3px 0 6px 0;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 50% / 0% 0% 100% 100%;
+  @media screen and (max-width: $smDesktopWidth){
+    bottom: 54px;
+  }
+	@media screen and (max-width: $tableWidth) {
+    left: 33%;
+  }
+  @media screen and (max-width: $phoneWidth) {
+    left: 30%;
+    bottom: -1px;
+  } 
+
+	&>span{
+		font-size: 12px;
+		color: #fff;
+	}
+}
+
+.username-wrap{
+	display: flex;
+  align-items: center;
+}
+.username{
+  font-size: 24px;
+  font-weight: 600;
+  color: #28263C;
+}
+.btn-close{
+	background-color: transparent;
+}
+.location-wrap{
+	margin-top: 12.5px;
+}
+.location-descr,
+.user-descr{
+	font-weight: bold;
+  font-size: 16px;
+}
+.user-descr{
+	color: #28263C;
+	margin-top: 12.5px;
+}
+
+.btn-group{
+	display: flex;
+  margin-top: 18.5px;
+}
+
+.btn-default{
+	border: 1px solid #6E6C79;
+  @include border-radius(5px);
+  margin-right: 10px;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-family:$mainFont;
+  color: #6E6C79;
+  background: transparent;
+
+  &:hover{
+		color: #fff;
+    background: $color-blue; 
+    border: none; 	
+  }
+  @media screen and (max-width: $smPhoneWidth) {
+    padding: 7px 10px;
+    font-size: 12px;
+  } 
+}

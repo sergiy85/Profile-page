@@ -1,0 +1,73 @@
+.control-panel{
+	padding: 0;
+}
+.panel-item{
+	display: flex;
+	align-items: center;
+	@media screen and (max-width: $smDesktopWidth) {
+    flex-wrap: wrap;
+  }
+}
+.content-box-item{
+  @include size(270px, 270px);
+	background-color: #E1E1E1;
+	@media screen and (max-width: $smDesktopWidth) {
+		flex-direction: column;
+  }
+  @media screen and (max-width: $tableWidth ) {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+.content-box{
+	&:not(:last-child){
+	  margin-right: 30px;
+	  @media screen and (max-width: $smDesktopWidth) {
+      margin-right: 20px;
+	  }  	
+	}
+	@media screen and (max-width: $smDesktopWidth) {
+    flex: 47% 0 1;
+  }
+  @media screen and (max-width: $tableWidth ) {
+    flex: 100% 0 1;
+  }
+}
+.content-box-control{
+	display: flex;
+	align-items: center;
+	min-width: 170px;
+}
+
+.content-control-wrap{
+	@media screen and (max-width: $smDesktopWidth) {
+    flex: 45% 0 1;
+    margin-right: auto !important;
+  }
+}
+.content-control{
+	min-width: 125px;
+	height: 125px;
+	background-color: #fff;
+	text-align: center;
+	font-size: 16px;
+	> img{
+		display: block;
+		padding: 28px 43px 18px 43px;
+		@include responsive(1054){
+		  padding: 27px 78px 18px;
+		}
+		@include responsive(486){
+			padding: 23px 41px;
+		}
+	}
+}
+.content-control-left{
+	margin: 20px 20px 20px 0;
+	@media screen and (max-width: $smDesktopWidth){
+		margin: 20px 0px;
+	}
+}
+.content-control-right{
+	margin: 20px 0; 
+}

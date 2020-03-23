@@ -1,16 +1,13 @@
-@import "./utils/libs";
-@import "./utils/vars";
-@import "./utils/mixins";
-@import "./utils/fonts";
-@import "./utils/reset";
-
 .header{
   width: 100%;
   background-color: $background-color;
 }
 .inner-header{
-  padding: 0 30px;
+  padding: 4px 30px;
   @include flexBetween ();
+  @include extraSmall{
+    padding: 4px 7px;
+  }
 }
 .wrap-container, 
 .account-list,
@@ -21,6 +18,9 @@
 
 .logo-wrap{
   margin-right: 39px;
+  @include extraSmall{
+    margin-right: 5px;
+  }
 }
 .search-wrap{
   display: flex;
@@ -31,8 +31,10 @@
   @include placeholder {
     color: $color-grey;
     font-size: 12px;
+    font-family: $mainFont;
   }
-  padding: 5px;
+  font-family: $mainFont;
+  padding: 5px 5px 0px 5px;
   width: 360px;
 
   @include medium() {
@@ -70,6 +72,7 @@
   background: red;
   color: #fff;
   font-size: 13px;
+  font-family: $mainFont;
   // visibility: hidden;
 }
 .avatar{
@@ -77,6 +80,10 @@
   @include btnService();
   margin: 0 28px;
   cursor: pointer;
+
+  @include extraSmall{
+    margin:0 20px;
+  }
 }
 .account-avatar-img{
   @include border-radius(50%);
@@ -96,12 +103,15 @@
 }
 .account-select, .account-credit{
   @include btnService();
+  font-family: $mainFont;
+  font-weight: bold;
 }
 .credit-img{
   margin-right: 5px;
 }
 .credit-count{
-  color:$color-blue;
+  color: $color-blue;
+  font-family: $mainFont;
   font-size: 18px;
   font-weight: bold;
 }
@@ -128,21 +138,25 @@
       will-change: transform;
       position: fixed;
       left: 0;
-      top: 0;
-      @include size(230px, 100vh);
+      top: 48px;
+      z-index: 9999;
+      @include size(100%, auto);
       background: $background-color;
       transform: translateX(-100%);
     }
 }
 .account-menu--active {
     @include responsive(651px) {
-        transform: translateX(0);
+      transform: translateX(0);
     }
 }
 .account-list{
   padding: 0;
   @include responsive(651px) {
-    flex-flow: column nowrap;
+   justify-content: space-around;
+  }
+  @include extraSmall{
+    padding: 0 7px;
   }
 }
 .account-item{
