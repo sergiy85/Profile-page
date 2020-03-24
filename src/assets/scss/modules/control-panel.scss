@@ -19,8 +19,11 @@
     margin-bottom: 30px;
   }
   > img{
-  	  min-height: 100%;
-  	  object-fit: cover;
+	   min-height: 100%;
+     -o-object-fit: cover;
+     object-fit: contain;
+     margin: 0 auto;
+     display: block;
   }
 }
 .content-box{
