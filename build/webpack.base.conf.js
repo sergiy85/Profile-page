@@ -6,11 +6,7 @@ const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-<<<<<<< HEAD
-// const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
-=======
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
->>>>>>> db61a55f9044a2ddbc0a26ba1133e4d7e014743f
 
 // Main const. Feel free to change it
 const PATHS = {
