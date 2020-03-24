@@ -4,7 +4,6 @@ import $ from 'jquery';
 global.jQuery = $;
 global.$ = $;
 
-<<<<<<< HEAD
 $(function () {
 	(function responsiveNav () {
 	  let btn = $('#menu-btn');
@@ -45,28 +44,3 @@ $(function () {
 	});
 
 })
-=======
-console.log("its work");
-// $(function () {
-    
-
-    (function responsiveNav () {
-        let btn = $('#menu-btn');
-        let nav = $('account-menu ');
-        let overlay = $('.overlay');
-
-        btn.on('click', function () {
-            nav.addClass('account-menu--active');
-            overlay.addClass('overlay--active');
-            $(this).attr('disabled', true);
-        });
-
-        overlay.on('click', function () {
-            nav.removeClass('nav--active');
-            overlay.removeClass('overlay--active');
-            btn.removeAttr('disabled');
-        })
-    })();
-    
-// })
->>>>>>> db61a55f9044a2ddbc0a26ba1133e4d7e014743f
