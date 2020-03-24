@@ -6,7 +6,11 @@ const fs = require("fs");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+<<<<<<< HEAD
 // const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+=======
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+>>>>>>> db61a55f9044a2ddbc0a26ba1133e4d7e014743f
 
 // Main const. Feel free to change it
 const PATHS = {
@@ -129,6 +133,14 @@ module.exports = {
       { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
       { from: `${PATHS.src}/static`, to: "" }
     ]),
+    new HtmlWebpackExternalsPlugin({ // optional plugin: inject cdn
+      externals: [
+        {
+          module: 'jquery',
+          entry: 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'
+        }
+      ]
+    }),
     new HtmlWebpackPlugin({
       template: `${PATHS.src}/index.html`
     })
