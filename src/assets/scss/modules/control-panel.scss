@@ -18,6 +18,10 @@
     flex-direction: column;
     margin-bottom: 30px;
   }
+  > img{
+  	  min-height: 100%;
+  	  object-fit: cover;
+  }
 }
 .content-box{
 	&:not(:last-child){
@@ -53,7 +57,7 @@
 	font-size: 16px;
 	> img{
 		display: block;
-		padding: 28px 43px 18px 43px;
+		padding: 28px 59px 18px 43px;
 		@include responsive(1054){
 		  padding: 27px 78px 18px;
 		}
